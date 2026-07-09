@@ -20,17 +20,29 @@
             height:70vh;
             display:block;
             background:#f3efe7;
+            --ar-button-bottom: 100px;
         }
 
-        .navigation{
+        .viewer-container{
+
+    position:relative;
+        }
+
+
+.navigation{
+
+    position:absolute;
+
+    left:50%;
+    bottom: -30px;
+
+    transform:translateX(-50%);
 
     display:flex;
 
-    justify-content:center;
-
     gap:20px;
 
-    margin:25px 0;
+    z-index:100;
 
 }
 
@@ -72,6 +84,7 @@
     transform:scale(0.96);
 
 }
+
 
         .card{
 
@@ -147,22 +160,26 @@
 
 <body>
 
-<model-viewer
-    src="assets/cammel.glb"
-    camera-controls
-    shadow-intensity="1"
-    min-camera-orbit="auto 0deg auto"
-    max-camera-orbit="auto 120deg auto"
-    ar
-    ar-modes="scene-viewer webxr">
+<div class="viewer-container">
 
-</model-viewer>
+    <model-viewer
+        src="assets/cammel.glb"
+        camera-controls
+        shadow-intensity="1"
+        min-camera-orbit="auto 0deg auto"
+        max-camera-orbit="auto 120deg auto"
+        ar
+        ar-modes="scene-viewer webxr">
 
-<div class="navigation">
+    </model-viewer>
 
-    <a href="index.html" class="nav-button">&#10094;</a>
+    <div class="navigation">
 
-    <a href="next.html" class="nav-button">&#10095;</a>
+        <a href="index.html" class="nav-button">&#10094;</a>
+
+        <a href="cammel.html" class="nav-button">&#10095;</a>
+
+    </div>
 
 </div>
 
@@ -172,7 +189,8 @@
     <h1>Верблюд - Тест</h1>
     
     <ul>
-        <li>Тестовая фотограмметрия для web.</li>
+        <li>Тестовая модель создана с помощью фотограмметрии.</li>
+        <li>Оптимизирована для Web.</li>
         <li>Поддерживает просмотр в дополненной реальности (AR).</li>
             </ul>
 
