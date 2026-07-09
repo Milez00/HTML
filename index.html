@@ -12,10 +12,22 @@
     display: block;
     background-color: #f3efe7;
         }
+
+        .annotation {
+                    background-color: #888888;
+                    position: absolute;
+                    transform: translate(10px, 10px);
+                    border-radius: 10px;
+                    padding: 10px;
+                  }
+
+                  model-viewer > .annotation {
+                    transform: translate(10px, 10px);
+                  }
     </style>
 </head>
 <body>
-    <h1> Бей петуха, Вова! А динозавриков не трогать...</h1>
+    
     <model-viewer 
     src="assets/dino2.glb" 
     camera-controls  
@@ -25,14 +37,9 @@ shadow-intensity="1"
     ar 
     ar-modes="scene-viewer webxr">
     
-    <button class="Hotspot" slot="hotspot-2" data-position="-0.05059166288950919m 0.14944133592562625m -0.006630579315794584m" data-normal="-0.02965805067794053m -0.2772614529782122m -0.960336652805877m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Гребешок</div>
-    </button><button class="Hotspot" slot="hotspot-3" data-position="0.07084744859887493m 0.06837916003895964m -0.01882635125562226m" data-normal="-0.005517261333138457m -0.06698202273077633m 0.9977389280058566m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Острый, острый коготок</div>
-    </button>
 
     <button class="hotspot" slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23" data-visibility-attribute="visible"></button>
-                  <div class="annotation">Аннотация: тестовая моделька игрушечного динозавра. Фотограмметрия.</div>
+                  <div class="annotation">Тестовая моделька игрушечного динозавра - фотограмметрия.</div>
 
 </model-viewer>
 
