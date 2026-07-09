@@ -22,25 +22,54 @@
             background:#f3efe7;
         }
 
-        .nav-button{
+        .navigation{
 
-    padding:12px 22px;
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin:25px 0;
+
+}
+
+.nav-button{
+
+    width:52px;
+    height:52px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
     background:white;
-
-    border-radius:30px;
 
     color:#333;
 
     text-decoration:none;
 
-    font-size:18px;
+    font-size:30px;
 
-    font-weight:600;
+    border-radius:50%;
 
     box-shadow:0 4px 12px rgba(0,0,0,.15);
 
-    transition:.2s;
+    transition:0.2s;
+
+}
+
+.nav-button:hover{
+
+    background:#f3f3f3;
+
+    transform:scale(1.08);
+
+}
+
+.nav-button:active{
+
+    transform:scale(0.96);
 
 }
 
@@ -131,13 +160,9 @@
 
 <div class="navigation">
 
-    <a href="previous.html" class="nav-button">
-        ← Предыдущая
-    </a>
+    <a href="previous.html" class="nav-button">&#10094;</a>
 
-    <a href="next.html" class="nav-button">
-        Следующая →
-    </a>
+    <a href="next.html" class="nav-button">&#10095;</a>
 
 </div>
 
